@@ -1,7 +1,7 @@
 {
   "name": "dsh-claude-code-templates",
   "version": "0.1.0",
-  "description": "Claude Code 技能模板库（claude-code-templates 移植，897 个 SKILL.md）",
+  "description": "Claude Code 技能模板库（claude-code-templates 移植，884 个 SKILL.md）",
   "type": "module",
   "license": "MIT",
   "author": "GongYuanCaiJi",

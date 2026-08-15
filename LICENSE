@@ -29,6 +29,14 @@ This MIT License covers only the code written for this port itself — the dsh
 loading shell (`lib/`), packaging (`package.json`, `cordis.patch.yml`) and tests
 (`test/`, `scripts/`). It does not cover the upstream content under `skills/`
 and `.claude-plugin/`, which is copied verbatim from davila7/claude-code-templates
-and remains under each directory's own license (Apache-2.0, MIT, or Anthropic
-source-available) — see `skills/ANTHROPIC_ATTRIBUTION.md` and
+and remains under each directory's own license (Apache-2.0 or MIT) — see
 `THIRD_PARTY_NOTICES.md`.
+
+The 13 Anthropic source-available directories originally shipped with the
+upstream (`document-processing/{docx,docx-official,pdf,pdf-anthropic,pdf-official,pptx,pptx-official,xlsx,xlsx-official}`
+and `scientific/document-skills/{docx,pdf,pptx,xlsx}`) have been REMOVED from
+this repository: their LICENSE.txt prohibits reproducing, distributing,
+sublicensing or transferring them to any third party, and public upstream
+hosting does not grant us redistribution rights. Fetch them directly from
+upstream if needed — see `skills/ANTHROPIC_ATTRIBUTION.md` (preserved verbatim)
+and `THIRD_PARTY_NOTICES.md`.

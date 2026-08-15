@@ -28,9 +28,9 @@ function freshRegistry() {
   return ctx;
 }
 
-test('ships all 897 upstream SKILL.md files', () => {
+test('ships all 884 upstream SKILL.md files', () => {
   const files = SKILL_ROOTS.flatMap(walkSkills);
-  assert.equal(files.length, 897, `expected 897 SKILL.md, got ${files.length}`);
+  assert.equal(files.length, 884, `expected 884 SKILL.md, got ${files.length}`);
 });
 
 test('shipped fidelity guard verifies every file against the manifest', () => {
@@ -40,14 +40,14 @@ test('shipped fidelity guard verifies every file against the manifest', () => {
   // shipped tool, and this test proves both agree.
   const result = spawnSync(process.execPath, ['scripts/verify-fidelity.mjs'], { cwd: ROOT, encoding: 'utf8' });
   assert.equal(result.status, 0, result.stderr);
-  assert.match(result.stdout, /5667 files match/);
+  assert.match(result.stdout, /5044 files match/);
 });
 
-test('registry integration: every candidate validates and all 867 unique names resolve', async () => {
+test('registry integration: every candidate validates and all 860 unique names resolve', async () => {
   const ctx = freshRegistry();
   const catalog = await ctx.skills.list();
-  // 897 files, 30 duplicated skill names across categories -> 867 unique winners
-  assert.equal(catalog.length, 867, `expected 867 unique skills, got ${catalog.length}`);
+  // 884 files, 45 duplicated skill names across categories -> 860 unique winners
+  assert.equal(catalog.length, 860, `expected 860 unique skills, got ${catalog.length}`);
   assert.ok(catalog.every((s) => /^[a-z0-9]+(-[a-z0-9]+)*$/.test(s.name)), 'all names kebab-case');
   assert.ok(catalog.every((s) => s.description.length > 0), 'all descriptions non-empty');
   assert.ok(catalog.every((s) => s.provider === 'dsh-claude-code-templates'), 'provider matches');
@@ -90,7 +90,7 @@ test('duplicate skill names resolve deterministically (sorted by category path)'
   const names = new Set(catalog.map((s) => s.name));
   const all = listSkills(SKILL_ROOTS);
   const dupNames = [...new Set(all.map((c) => c.name).filter((n) => all.filter((c) => c.name === n).length > 1))];
-  assert.ok(dupNames.length >= 25, `expected >=25 duplicate names, got ${dupNames.length}`);
+  assert.ok(dupNames.length >= 21, `expected >=21 duplicate names, got ${dupNames.length}`);
   for (const name of dupNames) {
     assert.ok(names.has(name), `${name} present in catalog`);
     const withDups = all.filter((c) => c.name === name).sort((a, b) => (a.path < b.path ? -1 : 1));
