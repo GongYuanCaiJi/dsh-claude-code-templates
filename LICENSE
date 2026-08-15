@@ -20,3 +20,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Scope
+
+This MIT License covers only the code written for this port itself — the dsh
+loading shell (`lib/`), packaging (`package.json`, `cordis.patch.yml`) and tests
+(`test/`, `scripts/`). It does not cover the upstream content under `skills/`
+and `.claude-plugin/`, which is copied verbatim from davila7/claude-code-templates
+and remains under each directory's own license (Apache-2.0, MIT, or Anthropic
+source-available) — see `skills/ANTHROPIC_ATTRIBUTION.md` and
+`THIRD_PARTY_NOTICES.md`.

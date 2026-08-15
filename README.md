@@ -81,11 +81,9 @@ dsh --profile <P> "用 skill 工具加载 pdf 技能，把这份文档转成 PDF
 
 ### 📜 License
 
-[MIT](LICENSE)，双版权：上游 `Copyright (c) 2025 Daniel (San) Ávila (claude-code-templates)` +
-`Copyright (c) 2026 GongYuanCaiJi (dsh port)`。
+本 repo 的 [MIT](LICENSE) 只涵盖**本移植自己的代码**：载入外壳（`lib/`）、打包（`package.json`、`cordis.patch.yml`）、测试（`test/`、`scripts/`）。双版权：上游 `Copyright (c) 2025 Daniel (San) Ávila (claude-code-templates)` + `Copyright (c) 2026 GongYuanCaiJi (dsh port)`。`package.json` 的 `license: "MIT"` 指的就是这一部分。
 
-技能内容版权归各上游作者，详见上游仓库的 [LICENSE](https://github.com/davila7/claude-code-templates/blob/main/LICENSE)
-与 [ANTHROPIC_ATTRIBUTION.md](https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ANTHROPIC_ATTRIBUTION.md)。
+`skills/` 与 `.claude-plugin/` 底下的**上游内容不是统一 MIT**，而是**混合授权**，以各目录自己的 `LICENSE` 为准：69 份目录级 LICENSE = 44 份 Apache-2.0 + 12 份 MIT（版权归各作者）+ 13 份 Anthropic source-available（`© 2025 Anthropic, PBC. All rights reserved`，仅作参考、不可再分发）。逐目录明细见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；Anthropic 那批的完整说明见 [ANTHROPIC_ATTRIBUTION.md](skills/ANTHROPIC_ATTRIBUTION.md)（上游原样保留，也见[上游 LICENSE](https://github.com/davila7/claude-code-templates/blob/main/LICENSE)）。
 
 **如果你喜欢这套技能，请也给上游 [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) 一个 star ⭐**
 
@@ -167,11 +165,8 @@ mirroring the upstream directory structure.
 
 ### 📜 License
 
-[MIT](LICENSE), dual copyright: upstream `Copyright (c) 2025 Daniel (San) Ávila (claude-code-templates)` +
-`Copyright (c) 2026 GongYuanCaiJi (dsh port)`.
+This repo's [MIT](LICENSE) covers **only this port's own code**: the loading shell (`lib/`), packaging (`package.json`, `cordis.patch.yml`), tests (`test/`, `scripts/`). Dual copyright: upstream `Copyright (c) 2025 Daniel (San) Ávila (claude-code-templates)` + `Copyright (c) 2026 GongYuanCaiJi (dsh port)`. The `license: "MIT"` field in `package.json` refers to that part only.
 
-Skill content belongs to the respective upstream authors — see the upstream
-[LICENSE](https://github.com/davila7/claude-code-templates/blob/main/LICENSE) and
-[ANTHROPIC_ATTRIBUTION.md](https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ANTHROPIC_ATTRIBUTION.md).
+The upstream content under `skills/` and `.claude-plugin/` is **not uniformly MIT** — it is **mixed-licensed**, and each directory's own `LICENSE` governs: 69 directory-level LICENSE files = 44 Apache-2.0 + 12 MIT (copyright to their respective authors) + 13 Anthropic source-available (`© 2025 Anthropic, PBC. All rights reserved`, reference only, not redistributable). Per-directory breakdown in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md); the Anthropic batch is documented in [ANTHROPIC_ATTRIBUTION.md](skills/ANTHROPIC_ATTRIBUTION.md) (preserved verbatim from upstream; see also the upstream [LICENSE](https://github.com/davila7/claude-code-templates/blob/main/LICENSE)).
 
 **If you like these skills, please also star upstream [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) ⭐**

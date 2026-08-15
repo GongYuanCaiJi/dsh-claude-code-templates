@@ -71,8 +71,48 @@ diff -r .claude-plugin/skills /tmp/upstream/.claude-plugin/skills
 
 此为 dsh 平台语义（名称即键），与上游 Claude Code 的 name-keyed 技能解析行为一致。
 
+## 技能树授权明细（按目录）
+
+`skills/` 与 `.claude-plugin/` 不是统一授权，**以各目录自己的 `LICENSE` 文件为准**。全树 69 份目录级
+`LICENSE` 文件分三类（均已原样保留，未改动）：
+
+### Apache-2.0（44 份）
+
+以下目录自带 Apache-2.0 LICENSE（首行多为空白、标题在第二行）：
+
+`ai-research/openai-docs`、`business-marketing/brand-guidelines-anthropic`、`business-marketing/brand-guidelines-community`、`creative-design/algorithmic-art`、`creative-design/canvas-design`、`creative-design/develop-web-game`、`creative-design/figma`、`creative-design/figma-implement-design`、`creative-design/frontend-design`、`creative-design/imagegen`、`creative-design/slack-gif-creator`、`creative-design/theme-factory`、`database/postgres-schema-design`、`design-to-code`、`development/artifacts-builder`、`development/claude-api`、`development/cloudflare-deploy`、`development/jupyter-notebook`、`development/mcp-builder`、`development/netlify-deploy`、`development/playwright`、`development/render-deploy`、`development/skill-creation-guide`、`development/skill-creator`、`development/web-artifacts-builder`、`development/webapp-testing`、`document-processing/doc`、`document-processing/spreadsheet`、`enterprise-communication/brand-guidelines`、`enterprise-communication/internal-comms`、`enterprise-communication/internal-comms-anthropic`、`enterprise-communication/internal-comms-community`、`enterprise-communication/slack-gif-creator`、`media/screenshot`、`media/speech`、`media/transcribe`、`productivity/skill-creator`、`security/security-best-practices`、`security/security-ownership-map`、`security/security-threat-model`、`security/webapp-testing`、`utilities/web-artifacts-builder`、`video/sora`、`workflow-automation/yeet`
+
+### Anthropic source-available（13 份，`© 2025 Anthropic, PBC. All rights reserved`）
+
+以下目录自带 Anthropic 版权声明，LICENSE 明文禁止 Reproduce / Distribute / sublicense，
+**仅作参考、不可再分发**（完整说明见 `skills/ANTHROPIC_ATTRIBUTION.md`，上游原样保留）：
+
+`document-processing/docx`、`document-processing/docx-official`、`document-processing/pdf`、`document-processing/pdf-anthropic`、`document-processing/pdf-official`、`document-processing/pptx`、`document-processing/pptx-official`、`document-processing/xlsx`、`document-processing/xlsx-official`、`scientific/document-skills/docx`、`scientific/document-skills/pdf`、`scientific/document-skills/pptx`、`scientific/document-skills/xlsx`
+
+### MIT（12 份，版权归各作者）
+
+| 目录 | 版权行 |
+|---|---|
+| `career/workorai` | Copyright (c) 2026 WorkorAI |
+| `ai-research/loki-mode` | Copyright (c) 2025 Loki Mode Contributors |
+| `development/vercel-deploy` | Copyright (c) 2026 Vercel |
+| `development/zapier-workflows` | Copyright (c) 2025 Zapier Workflows Skill Contributors |
+| `workflow-automation/n8n` | Copyright (c) 2025 Romuald Członkowski |
+| `business-marketing/product-decision-agent` | Copyright (c) 2026 xuxing |
+| `productivity/avoid-ai-writing` | Copyright (c) 2026 Conor Bronsdon |
+| `productivity/think-tank` | Copyright (c) 2026 Danny |
+| `productivity/notebooklm` | Copyright (c) 2025 Please Prompto! |
+| `productivity/doc-chaser-lite` | Copyright (c) 2026 Moai Loops |
+| `scientific/markitdown` | Copyright (c) Microsoft Corporation. |
+| `scientific/neuropixels-analysis` | Copyright (c) 2025 Shen Lab |
+
+### 其他第三方组件
+
+- **字体**：`creative-design/canvas-design/canvas-fonts/` 54 个 TTF，各配 `OFL.txt`（SIL Open Font License v1.1）
+- **owasp-security**：`.claude-plugin/skills/owasp-security/` 的 `skill.json` 自述 MIT，来源 [mfkocalar/OWASP-Security-Skills](https://github.com/mfkocalar/OWASP-Security-Skills)（目录内无独立 LICENSE 文件）
+
 ## 其他
 
 - 上游技能含 Anthropic 官方技能（`cli-tool/components/skills/ANTHROPIC_ATTRIBUTION.md` 有完整授权说明），
-  原样保留，未删除。
+  原样保留，未删除。技能树整体为混合授权，逐目录明细见上方「技能树授权明细（按目录）」。
 - 技能文字为英文（上游即英文）。依「100% 原样复制」规则不翻译技能内容。
