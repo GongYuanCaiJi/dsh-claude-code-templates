@@ -1,0 +1,69 @@
+{
+  "name": "dsh-claude-code-templates",
+  "version": "0.1.0",
+  "description": "Claude Code 技能模板库（claude-code-templates 移植，897 个 SKILL.md）",
+  "type": "module",
+  "license": "MIT",
+  "author": "GongYuanCaiJi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GongYuanCaiJi/dsh-claude-code-templates.git"
+  },
+  "homepage": "https://github.com/GongYuanCaiJi/dsh-claude-code-templates#readme",
+  "bugs": {
+    "url": "https://github.com/GongYuanCaiJi/dsh-claude-code-templates/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "claude-code",
+    "skills",
+    "skill-templates",
+    "ai",
+    "llm",
+    "ai-agent",
+    "coding-assistant",
+    "developer-tools"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "lib",
+    "skills",
+    ".claude-plugin",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "THIRD_PARTY_NOTICES.sha256"
+  ],
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/skills.test.js",
+    "prepare": "node scripts/verify-fidelity.mjs",
+    "prepublishOnly": "npm test",
+    "prepack": "node scripts/verify-fidelity.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-skill": "0.1.0-rc.6"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.1"
+  }
+}
